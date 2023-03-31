@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_rounded_stroke_neutral_1" android:state_focused="true"/>
+    <item android:drawable="@drawable/background_rounded_stroke_line_neutral_1_disabled" android:state_enabled="false"/>
+    <item android:drawable="@drawable/background_rounded_stroke_line_neutral_3"/>
+</selector>
