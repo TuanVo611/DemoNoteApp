@@ -8,6 +8,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.notesappproject.data.model.AppDataBase
 import com.example.notesappproject.databinding.ActivityMainBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -20,17 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupView() {
         actionButtonAdd()
-        setupRoomDatabase()
     }
 
-    private fun setupRoomDatabase() {
-        val database = Room.databaseBuilder(applicationContext,AppDataBase::class.java,"DataBaseNotes").build()
-
-        val dataContentNotesDAO = database.dataContentNotesDAO()
-        val listContentNotes = dataContentNotesDAO.getAll()
-
-
-    }
 
     private fun actionButtonAdd() {
         binding.imageButtonAdd.setOnClickListener(){

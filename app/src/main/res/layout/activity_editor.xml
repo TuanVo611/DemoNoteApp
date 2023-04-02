@@ -60,12 +60,13 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/image_view_background_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/image_button_search" />
 
             <ImageView
-                android:id="@+id/image_save"
+                android:id="@+id/image_view_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -75,8 +76,8 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_view_title_notes"
+    <EditText
+        android:id="@+id/edit_text_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#9A9A9A"
@@ -86,17 +87,14 @@
         android:layout_marginStart="24dp"
         />
 
-    <TextView
-        android:id="@+id/text_view_content_notes"
+    <EditText
+        android:id="@+id/edit_text_content"
         android:layout_marginTop="40dp"
         android:layout_marginStart="24dp"
         android:textSize="23sp"
         android:textColor="#9A9A9A"
         android:text="Type something..."
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
-
-
 
 </LinearLayout>

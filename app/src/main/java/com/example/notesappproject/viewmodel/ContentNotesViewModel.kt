@@ -1,5 +1,6 @@
 package com.example.notesappproject.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.notesappproject.data.model.DataContentNotes
 import com.example.notesappproject.data.repository.ContentNotesRepository
@@ -31,5 +32,6 @@ class ContentNotesViewModel : ViewModel() {
             result.value = data.value
         }
         return result
+
     }
 }

@@ -8,7 +8,7 @@ import com.example.notesappproject.R
 import com.example.notesappproject.data.model.DataContentNotes
 import com.example.notesappproject.databinding.LayoutItemNotesBinding
 
-class ContentNotesAdapter(private val listNotes: List<DataContentNotes>) :
+class ContentNotesAdapter(private val listNotes: ArrayList<DataContentNotes>,private var onClickButton: OnClickButton) :
     RecyclerView.Adapter<ContentNotesAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -30,4 +30,12 @@ class ContentNotesAdapter(private val listNotes: List<DataContentNotes>) :
     override fun getItemCount(): Int {
         return listNotes.size
     }
+
+//    fun notifySetChanged(newList: ArrayList<DataContentNotes>) {
+//        val diffCallBack = DataNotesDiffCallBack(listNotes, newList)
+//        val diffResults = DiffUtil.calculateDiff(diffCallBack)
+//        diffResults.dispatchUpdatesTo(this)
+//        this.listNotes.clear()
+//        this.listNotes.addAll(newList)
+//    }
 }

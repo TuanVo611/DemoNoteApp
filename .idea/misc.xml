@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1865" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/drawable/background_button_discard.xml" value="0.177" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/drawable/background_button_save.xml" value="0.177" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/drawable/background_dialog.xml" value="0.177" />
@@ -12,6 +13,7 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/drawable/background_rounded_stroke_line_neutral_3.xml" value="0.177" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/drawable/background_rounded_stroke_neutral_1.xml" value="0.177" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/drawable/background_search.xml" value="0.177" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1865" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/layout/activity_editor.xml" value="0.2" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/layout/activity_editor2.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/NotesAppProject/app/src/main/res/layout/activity_find_not_found.xml" value="0.2359375" />
