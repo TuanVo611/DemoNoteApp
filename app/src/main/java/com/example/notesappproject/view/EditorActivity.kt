@@ -3,6 +3,7 @@ package com.example.notesappproject.view
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Window
 import android.widget.Button
 import androidx.activity.viewModels
@@ -13,7 +14,6 @@ import com.example.notesappproject.databinding.ActivityEditorBinding
 import com.example.notesappproject.viewmodel.ContentNotesViewModel
 
 class EditorActivity : AppCompatActivity() {
-    private lateinit var adapter : ContentNotesAdapter
     private val viewModel: ContentNotesViewModel by viewModels()
     private lateinit var binding: ActivityEditorBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,12 +36,6 @@ class EditorActivity : AppCompatActivity() {
     }
 
     private fun addContentNotes() {
-        val titleNotes = binding.editTextTitle.text.toString()
-        val contentNotes = binding.editTextContent.text.toString()
-        val timeNotes = System.currentTimeMillis()
-
-        val dataContentNotes = DataContentNotes(0, titleNotes, contentNotes, timeNotes)
-
         binding.imageViewBackgroundSave.setOnClickListener {
             val dialog = Dialog(this)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -53,7 +47,12 @@ class EditorActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
             buttonSave.setOnClickListener {
-                viewModel.addContentNotes(dataContentNotes).observe(this){
+                val titleNotes = binding.editTextTitle.text.toString()
+                val contentNotes = binding.editTextContent.text.toString()
+                val timeNotes = System.currentTimeMillis()
+                val dataContentNotes = DataContentNotes(0, titleNotes, contentNotes, timeNotes)
+                viewModel.addContentNotes(dataContentNotes).observe(this) {
+                    Log.d("TuanVA", "addContentNotes1: $dataContentNotes")
                 }
                 dialog.dismiss()
                 val intent = Intent(this, HomeScreenActivity::class.java)

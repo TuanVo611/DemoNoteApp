@@ -1,5 +1,6 @@
 package com.example.notesappproject.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -23,18 +24,27 @@ class HomeScreenActivity : AppCompatActivity() {
 
     private fun setupView() {
         setDataTitles()
+        deleteContent()
+    }
+
+    private fun deleteContent() {
+
+
     }
 
     private fun setDataTitles() {
         viewModel.listContentNotes.observe(this){
             val adapter =ContentNotesAdapter(it as ArrayList<DataContentNotes>,object: OnClickButton{
                 override fun onClick(position: Int) {
-                    viewModel.listContentNotes.observe(this@HomeScreenActivity){
-
-                    }
+                    val idNotes = it[position].Id
+                    val titlesNotes = it[position].titleNotes
+                    val contentNotes = it[position].contentNotes
+                    val timeNotes = it[position].timeNotes
+                    val dataNotes = DataContentNotes(idNotes,titlesNotes,contentNotes,timeNotes)
                 }
-
             })
+            val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            binding.recycleViewHomeScreen.layoutManager = layoutManager
             binding.recycleViewHomeScreen.adapter = adapter
         }
     }

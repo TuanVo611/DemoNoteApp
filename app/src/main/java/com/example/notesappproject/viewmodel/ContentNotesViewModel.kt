@@ -30,8 +30,18 @@ class ContentNotesViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.Main) {
             val data = repository.addContentNotes(dataContentNotes)
             result.value = data.value
+            Log.d("TuanVA", "addContentNotes2: $dataContentNotes")
         }
         return result
 
+    }
+
+    fun deleteContentNotes(dataContentNotes: DataContentNotes): LiveData<Unit> {
+        val result = MutableLiveData<Unit>()
+        viewModelScope.launch(Dispatchers.Main) {
+            val data = repository.deleteContentNotes(dataContentNotes)
+            result.value = data.value
+        }
+        return result
     }
 }

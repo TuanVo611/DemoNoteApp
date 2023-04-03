@@ -1,5 +1,6 @@
 package com.example.notesappproject.data.datasource
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.notesappproject.data.model.AppDataBase
@@ -24,6 +25,16 @@ class ContentNotesDataSource : CoroutineScope {
     suspend fun addContentNotes(dataContentNotes: DataContentNotes) : LiveData<Unit> {
         val dataAddContentNotes = withContext(Dispatchers.IO){
             AppDataBase.getDatabaseClient().dataContentNotesDAO().insertAll(dataContentNotes)
+        }
+        val result = MutableLiveData<Unit>()
+        result.value = dataAddContentNotes
+        Log.d("TuanVA", "addContentNotes3: $dataContentNotes")
+        return result
+    }
+
+    suspend fun deleteContentNotes(dataContentNotes: DataContentNotes) : LiveData<Unit>{
+        val dataAddContentNotes = withContext(Dispatchers.IO){
+            AppDataBase.getDatabaseClient().dataContentNotesDAO().delete(dataContentNotes)
         }
         val result = MutableLiveData<Unit>()
         result.value = dataAddContentNotes

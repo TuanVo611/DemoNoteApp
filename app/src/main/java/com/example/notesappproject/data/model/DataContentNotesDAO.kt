@@ -1,6 +1,7 @@
 package com.example.notesappproject.data.model
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
@@ -12,4 +13,7 @@ interface DataContentNotesDAO {
 
     @Insert
     fun insertAll( dataContentNotes: DataContentNotes)
+
+    @Delete
+    fun delete(dataContentNotes: DataContentNotes)
 }
