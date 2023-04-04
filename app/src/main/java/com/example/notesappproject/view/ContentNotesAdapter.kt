@@ -9,6 +9,7 @@ import com.example.notesappproject.R
 import com.example.notesappproject.data.model.DataContentNotes
 import com.example.notesappproject.databinding.LayoutItemNotesBinding
 
+
 class ContentNotesAdapter(private val listNotes: ArrayList<DataContentNotes>,private var onClickButton: OnClickButton) :
     RecyclerView.Adapter<ContentNotesAdapter.ViewHolder>() {
 
@@ -18,6 +19,10 @@ class ContentNotesAdapter(private val listNotes: ArrayList<DataContentNotes>,pri
             binding.textViewContentNotesItem.text = contentNotes.titleNotes.toString()
             binding.textViewContentNotesItem.setOnClickListener(){
                 onClickButton.onClick(position = adapterPosition)
+            }
+            binding.textViewContentNotesItem.setOnLongClickListener {
+                onClickButton.onLongClick(position = adapterPosition)
+                true
             }
         }
     }

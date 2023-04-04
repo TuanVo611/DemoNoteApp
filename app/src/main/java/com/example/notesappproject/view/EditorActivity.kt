@@ -26,13 +26,35 @@ class EditorActivity : AppCompatActivity() {
     private fun setupView() {
         addContentNotes()
         buttonBackAction()
+        getContentFromEditor()
+
+    }
+
+    private fun getContentFromEditor() {
+        var titleNotes = intent.getStringExtra("KEY_TITLE")
+        var contentNotes = intent.getStringExtra("KEY_CONTENT")
+        binding.editTextTitle.setText(titleNotes)
+        binding.editTextContent.setText(contentNotes)
     }
 
     private fun buttonBackAction() {
         binding.buttonBack.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val dialog = Dialog(this)
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            dialog.setCancelable(false)
+            dialog.setContentView(R.layout.dialog_sure_discard)
+            val buttonKeep = dialog.findViewById(R.id.button_keep) as Button
+            val buttonDiscard = dialog.findViewById(R.id.button_discard) as Button
+            buttonDiscard.setOnClickListener(){
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            buttonKeep.setOnClickListener(){
+                dialog.dismiss()
+            }
+            dialog.show()
         }
+
     }
 
     private fun addContentNotes() {
@@ -58,7 +80,7 @@ class EditorActivity : AppCompatActivity() {
                 val intent = Intent(this, HomeScreenActivity::class.java)
                 startActivity(intent)
             }
-            dialog.show()
+
         }
     }
 }
