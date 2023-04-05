@@ -41,6 +41,7 @@ class ContentNotesViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.Main) {
             val data = repository.deleteContentNotes(dataContentNotes)
             result.value = data.value
+            Log.d("TuanVA", "deleteContentNotes1:$dataContentNotes ")
         }
         return result
     }

@@ -2,15 +2,8 @@ package com.example.notesappproject.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Room
-import androidx.room.RoomDatabase
-import com.example.notesappproject.data.model.AppDataBase
 import com.example.notesappproject.databinding.ActivityMainBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding

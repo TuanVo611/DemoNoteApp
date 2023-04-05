@@ -38,6 +38,7 @@ class ContentNotesDataSource : CoroutineScope {
         }
         val result = MutableLiveData<Unit>()
         result.value = dataAddContentNotes
+        Log.d("TuanVA", "deleteContentNotes2: $dataContentNotes")
         return result
     }
 }
