@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity"
     android:background="#252525"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <RelativeLayout
-            android:layout_marginTop="47dp"
-            android:layout_marginStart="22dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="47dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -35,10 +35,10 @@
 
 
         <RelativeLayout
-            android:layout_marginTop="47dp"
-            android:layout_marginStart="196dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="196dp"
+            android:layout_marginTop="47dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -54,10 +54,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_marginTop="47dp"
-            android:layout_marginStart="21dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="47dp">
 
             <ImageView
                 android:id="@+id/image_view_background_save"
@@ -76,25 +76,38 @@
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/edit_text_title"
+    <com.google.android.material.textfield.TextInputLayout
+        android:background="#252525"
+        android:id="@+id/text_input_layout_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#9A9A9A"
-        android:text="Title"
-        android:textSize="48sp"
-        android:layout_marginTop="40dp"
         android:layout_marginStart="24dp"
-        />
+        android:layout_marginTop="10dp">
 
-    <EditText
-        android:id="@+id/edit_text_content"
-        android:layout_marginTop="40dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#252525"
+            android:hint="Title"
+            android:textColorHint="#5E5757"
+            android:textSize="48sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:background="#252525"
+        android:id="@+id/text_input_layout_content"
         android:layout_marginStart="24dp"
-        android:textSize="23sp"
-        android:textColor="#9A9A9A"
-        android:text="Type something..."
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#252525"
+            android:hint="Type something..."
+            android:textColor="#9A9A9A"
+            android:textSize="23sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>

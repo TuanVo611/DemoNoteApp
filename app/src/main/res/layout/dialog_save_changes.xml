@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#CFCFCF"
-        android:text="Create your first notes !"
+        android:text="Save changes ?"
         android:textSize="20sp"
         android:gravity="center"
         android:layout_marginTop="6dp"

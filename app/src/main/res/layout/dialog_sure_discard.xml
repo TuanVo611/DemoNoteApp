@@ -1,61 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="330dp"
-    android:layout_height="236dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/background_dialog">
+    >
 
     <LinearLayout
-        android:layout_marginTop="45dp"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/icon_error"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#CFCFCF"
-        android:text="Create your first notes !"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_marginTop="6dp"
-        />
-
-    <LinearLayout
-        android:layout_marginTop="24dp"
-        android:weightSum="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:background="@drawable/background_dialog"
+        android:orientation="vertical"
+        android:layout_width="330dp"
+        android:layout_height="236dp">
         <LinearLayout
+            android:layout_marginTop="45dp"
             android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_discard"
-                android:text="Discard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_button_discard"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_keep"
-                android:text="Keep"
-                android:background="@drawable/background_button_save"
+            <ImageView
+                android:src="@drawable/icon_error"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#CFCFCF"
+            android:text="Are your sure you want discard your changes ?"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_discard"
+                    android:text="Discard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_discard"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_keep"
+                    android:text="Keep"
+                    android:background="@drawable/background_button_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

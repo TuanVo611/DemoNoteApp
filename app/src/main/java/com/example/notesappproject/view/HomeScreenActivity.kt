@@ -13,16 +13,25 @@ import com.example.notesappproject.viewmodel.ContentNotesViewModel
 class HomeScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeScreenBinding
     private val viewModel: ContentNotesViewModel by viewModels()
-    private lateinit var adapter: ContentNotesAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
+
         binding = ActivityHomeScreenBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupView()
     }
 
+
     private fun setupView() {
         setDataTitles()
+        addNotes()
+    }
+
+    private fun addNotes() {
+        binding.imageButtonAddNote.setOnClickListener {
+            val intent = Intent(this, EditorActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setDataTitles() {
@@ -47,8 +56,10 @@ class HomeScreenActivity : AppCompatActivity() {
                         val timeNotes = it[position].timeNotes
                         val dataNotes =
                             DataContentNotes(idNotes, titlesNotes, contentNotes, timeNotes)
-                        viewModel.deleteContentNotes(dataNotes)
-                        Log.d("TuanVA", "onLongClick: clicked item")
+                        viewModel.deleteContentNotes(dataNotes).observe(this@HomeScreenActivity) {
+                            Log.d("TuanVA", "onLongClick: clicked item")
+                        }
+
                     }
                 })
             val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

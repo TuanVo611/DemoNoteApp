@@ -1,6 +1,5 @@
 package com.example.notesappproject.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.*
 import com.example.notesappproject.data.model.DataContentNotes
 import com.example.notesappproject.data.repository.ContentNotesRepository
@@ -30,7 +29,6 @@ class ContentNotesViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.Main) {
             val data = repository.addContentNotes(dataContentNotes)
             result.value = data.value
-            Log.d("TuanVA", "addContentNotes2: $dataContentNotes")
         }
         return result
 
@@ -41,7 +39,6 @@ class ContentNotesViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.Main) {
             val data = repository.deleteContentNotes(dataContentNotes)
             result.value = data.value
-            Log.d("TuanVA", "deleteContentNotes1:$dataContentNotes ")
         }
         return result
     }

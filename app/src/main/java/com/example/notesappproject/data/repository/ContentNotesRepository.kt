@@ -11,12 +11,9 @@ class ContentNotesRepository {
         return dataSource.getListContentNotes()
     }
 
-    suspend fun addContentNotes(
-        dataContentNotes: com.example.notesappproject.data.model.DataContentNotes
-    ) =
+    suspend fun addContentNotes(dataContentNotes: com.example.notesappproject.data.model.DataContentNotes) =
         dataSource.addContentNotes(dataContentNotes)
 
-    suspend fun deleteContentNotes(
-        dataContentNotes: com.example.notesappproject.data.model.DataContentNotes
-    ) = dataSource.deleteContentNotes(dataContentNotes)
+    suspend fun deleteContentNotes(dataContentNotes: com.example.notesappproject.data.model.DataContentNotes) =
+        dataSource.deleteContentNotes(dataContentNotes)
 }

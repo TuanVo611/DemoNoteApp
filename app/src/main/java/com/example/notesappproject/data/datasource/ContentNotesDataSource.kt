@@ -33,11 +33,11 @@ class ContentNotesDataSource : CoroutineScope {
     }
 
     suspend fun deleteContentNotes(dataContentNotes: DataContentNotes) : LiveData<Unit>{
-        val dataAddContentNotes = withContext(Dispatchers.IO){
+        val dataDeleteContentNotes = withContext(Dispatchers.IO){
             AppDataBase.getDatabaseClient().dataContentNotesDAO().delete(dataContentNotes)
         }
         val result = MutableLiveData<Unit>()
-        result.value = dataAddContentNotes
+        result.value = dataDeleteContentNotes
         Log.d("TuanVA", "deleteContentNotes2: $dataContentNotes")
         return result
     }

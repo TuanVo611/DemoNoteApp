@@ -3,6 +3,7 @@ package com.example.notesappproject.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesappproject.R
 import com.example.notesappproject.data.model.DataContentNotes
@@ -39,11 +40,11 @@ class ContentNotesAdapter(private val listNotes: ArrayList<DataContentNotes>,pri
         return listNotes.size
     }
 
-//    fun notifySetChanged(newList: ArrayList<DataContentNotes>) {
-//        val diffCallBack = DataNotesDiffCallBack(listNotes, newList)
-//        val diffResults = DiffUtil.calculateDiff(diffCallBack)
-//        diffResults.dispatchUpdatesTo(this)
-//        this.listNotes.clear()
-//        this.listNotes.addAll(newList)
-//    }
+    fun notifySetChanged(newList: ArrayList<DataContentNotes>) {
+        val diffCallBack = DataNotesDiffCallBack(listNotes, newList)
+        val diffResults = DiffUtil.calculateDiff(diffCallBack)
+        diffResults.dispatchUpdatesTo(this)
+        this.listNotes.clear()
+        this.listNotes.addAll(newList)
+    }
 }
