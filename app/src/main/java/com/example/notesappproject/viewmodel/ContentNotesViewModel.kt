@@ -8,6 +8,7 @@ import kotlinx.coroutines.launch
 
 class ContentNotesViewModel : ViewModel() {
     private val repository = ContentNotesRepository()
+
     private val _listContentNotes = MediatorLiveData<List<DataContentNotes>>()
     val listContentNotes: LiveData<List<DataContentNotes>>
         get() = _listContentNotes

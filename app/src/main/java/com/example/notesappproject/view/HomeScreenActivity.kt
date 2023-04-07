@@ -14,7 +14,6 @@ class HomeScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeScreenBinding
     private val viewModel: ContentNotesViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
-
         binding = ActivityHomeScreenBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -57,6 +56,7 @@ class HomeScreenActivity : AppCompatActivity() {
                         val dataNotes =
                             DataContentNotes(idNotes, titlesNotes, contentNotes, timeNotes)
                         viewModel.deleteContentNotes(dataNotes).observe(this@HomeScreenActivity) {
+                            viewModel.getListContentNotes()
                             Log.d("TuanVA", "onLongClick: clicked item")
                         }
 
