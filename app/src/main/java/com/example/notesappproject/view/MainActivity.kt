@@ -4,21 +4,18 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.Window
 import android.widget.Button
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isInvisible
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notesappproject.R
 import com.example.notesappproject.data.model.DataContentNotes
 import com.example.notesappproject.databinding.ActivityMainBinding
 import com.example.notesappproject.databinding.LayoutItemNotesBinding
 import com.example.notesappproject.viewmodel.ContentNotesViewModel
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -52,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun actionButtonAdd() {
-        binding.imageButtonAdd.setOnClickListener() {
+        binding.imageButtonAdd.setOnClickListener {
             val intent = Intent(this, EditorActivity::class.java)
             startActivity(intent)
         }
@@ -75,18 +72,6 @@ class MainActivity : AppCompatActivity() {
 
                     @SuppressLint("ResourceAsColor")
                     override fun onLongClick(position: Int) {
-//                        bindingItem.backGroundContentNotesItem.isInvisible = true
-//                        bindingItem.backGroundDelete.isVisible = true
-//                        bindingItem.backGroundDelete.setBackgroundColor(R.color.black)
-//                        val idNotes = it[position].Id
-//                        val titlesNotes = it[position].titleNotes
-//                        val contentNotes = it[position].contentNotes
-//                        val timeNotes = it[position].timeNotes
-//                        val dataNotes =
-//                            DataContentNotes(idNotes, titlesNotes, contentNotes, timeNotes)
-//                        viewModel.deleteContentNotes(dataNotes).observe(this@MainActivity) {
-//                            viewModel.getListContentNotes()
-//                        }
                     }
 
                     override fun onDeleteClick(position: Int) {
