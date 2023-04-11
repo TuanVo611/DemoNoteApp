@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">NotesAppProject</string>
+    <string name="text_title_note">Title</string>
+    <string name="text_type_somethings">Type something...</string>
+    <string name="text_main_title">Notes</string>
+    <string name="text_create_first_note">Create your first notes !</string>
+    <string name="text_button_discard">Discard</string>
+    <string name="text_button_save">Save</string>
+    <string name="text_dialog_save">Save changes ?</string>
+    <string name="text_button_keep">Keep</string>
+    <string name="text_item_content">Content</string>
+
 </resources>

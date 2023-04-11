@@ -33,17 +33,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupView() {
         actionButtonAdd()
-        displayList()
+        subcribeView()
         setDataTitles()
     }
 
-    private fun displayList() {
+    private fun subcribeView() {
         viewModel.listContentNotes.observe(this) {
             if (it != null && it.isNotEmpty()) {
                 binding.imageViewMain.visibility = View.GONE
                 binding.textViewMain.visibility = View.GONE
                 binding.recycleViewHomeScreen.visibility = View.VISIBLE
             }
+                if (it != null && it.isEmpty()){
+                    binding.imageViewMain.visibility = View.VISIBLE
+                    binding.textViewMain.visibility = View.VISIBLE
+                }
         }
     }
 

@@ -15,15 +15,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notes"
+            android:text="@string/text_main_title"
             android:textColor="#FFFFFF"
-            android:textSize="43sp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="47dp"/>
+            android:textSize="@dimen/size_43sp"
+            android:layout_marginStart="@dimen/size_24dp"
+            android:layout_marginTop="@dimen/size_47dp"/>
 
         <RelativeLayout
-            android:layout_marginTop="47dp"
-            android:layout_marginStart="129dp"
+            android:layout_marginTop="@dimen/size_47dp"
+            android:layout_marginStart="@dimen/size_129dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -33,16 +33,16 @@
                 android:src="@drawable/image_button_search" />
 
             <ImageView
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/size_16dp"
+                android:layout_marginStart="@dimen/size_16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_search"/>
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_marginTop="47dp"
-            android:layout_marginStart="21dp"
+            android:layout_marginTop="@dimen/size_47dp"
+            android:layout_marginStart="@dimen/size_21dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
@@ -51,8 +51,8 @@
                 android:src="@drawable/image_button_search"/>
 
             <ImageView
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/size_16dp"
+                android:layout_marginStart="@dimen/size_16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_info"/>
@@ -69,18 +69,18 @@
             android:src="@drawable/image_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:layout_marginStart="32dp"/>
+            android:layout_marginTop="@dimen/size_120dp"
+            android:layout_marginStart="@dimen/size_32dp"/>
 
         <TextView
             android:id="@+id/text_view_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="416dp"
+            android:layout_marginTop="@dimen/size_416dp"
             android:gravity="center"
-            android:text="Create your first notes !"
+            android:text="@string/text_create_first_note"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="@dimen/size_20sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycle_view_home_screen"
@@ -92,8 +92,8 @@
         </androidx.recyclerview.widget.RecyclerView>
         <RelativeLayout
             android:id="@+id/image_button_add"
-            android:layout_marginTop="476dp"
-            android:layout_marginStart="309dp"
+            android:layout_marginTop="@dimen/size_476dp"
+            android:layout_marginStart="@dimen/size_309dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -105,49 +105,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="34dp"
+                android:layout_marginStart="@dimen/size_36dp"
+                android:layout_marginTop="@dimen/size_34dp"
                 android:src="@drawable/icon_add" />
         </RelativeLayout>
     </RelativeLayout>
-
-<!--    <ImageView-->
-<!--        android:visibility="invisible"-->
-<!--        android:id="@+id/image_view_main"-->
-<!--        android:src="@drawable/image_home"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="120dp"-->
-<!--        android:layout_marginStart="32dp"/>-->
-
-<!--    <TextView-->
-<!--        android:visibility="invisible"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        android:text="Create your first notes !"-->
-<!--        android:textSize="20sp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="6dp"-->
-<!--        />-->
-
-<!--    <RelativeLayout-->
-<!--        android:layout_marginTop="70dp"-->
-<!--        android:layout_marginStart="309dp"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content">-->
-<!--        -->
-<!--        <ImageView-->
-<!--            android:id="@+id/image_button_add"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/image_button_add" />-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="36dp"-->
-<!--            android:layout_marginTop="34dp"-->
-<!--            android:src="@drawable/icon_add" />-->
-<!--    </RelativeLayout>-->
 </LinearLayout>

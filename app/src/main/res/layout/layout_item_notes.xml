@@ -4,17 +4,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="10dp"
+    app:cardElevation="@dimen/size_10dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="@dimen/size_10dp">
 
     <LinearLayout
         android:background="@drawable/background_item_notes"
         android:id="@+id/back_ground_content_notes_item"
-        android:paddingBottom="10dp"
+        android:paddingBottom="@dimen/size_10dp"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="@dimen/size_110dp"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -22,20 +22,20 @@
             android:id="@+id/text_view_content_notes_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="10dp"
-            android:textSize="25sp"
+            android:layout_marginStart="@dimen/size_12dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:textSize="@dimen/size_25sp"
             android:textColor="#000000"
             android:gravity="center"
-            android:text="Content"/>
+            android:text="@string/text_item_content"/>
 
     </LinearLayout>
     <LinearLayout
         android:background="#EF1414"
         android:id="@+id/back_ground_delete"
-        android:paddingBottom="10dp"
+        android:paddingBottom="@dimen/size_10dp"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="@dimen/size_110dp"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -43,8 +43,8 @@
             android:id="@+id/image_view_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/size_12dp"
+            android:layout_marginTop="@dimen/size_10dp"
             android:src="@drawable/image_view_delete"
             android:gravity="center"
             />

@@ -77,7 +77,7 @@ class EditorActivity : AppCompatActivity() {
                     Log.d("TuanVA", "addContentNotes1: $dataContentNotes")
                 }
                 dialog.dismiss()
-                val intent = Intent(this, HomeScreenActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
             dialog.show()

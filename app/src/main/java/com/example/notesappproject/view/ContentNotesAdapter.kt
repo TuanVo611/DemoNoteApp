@@ -26,10 +26,10 @@ class ContentNotesAdapter(private val listNotes: ArrayList<DataContentNotes>,pri
             val binding = LayoutItemNotesBinding.bind(itemView)
             binding.textViewContentNotesItem.text = contentNotes.titleNotes.toString()
             binding.backGroundDelete.isInvisible = true
-            binding.textViewContentNotesItem.setOnClickListener {
+            binding.backGroundContentNotesItem.setOnClickListener {
                 onClickButton.onClick(position = adapterPosition)
             }
-            binding.textViewContentNotesItem.setOnLongClickListener {
+            binding.backGroundContentNotesItem.setOnLongClickListener {
                 onClickButton.onLongClick(position = adapterPosition)
                 binding.backGroundDelete.isVisible = true
                 true
@@ -37,7 +37,6 @@ class ContentNotesAdapter(private val listNotes: ArrayList<DataContentNotes>,pri
 
             binding.imageViewDelete.setOnClickListener {
                 onClickButton.onDeleteClick(position = adapterPosition)
-
                 }
             }
         }
